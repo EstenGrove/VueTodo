@@ -32,7 +32,9 @@
             <div class="displayType isPersonal" v-if="todo.type == 'Personal'">{{todo.type}}</div>
             <div class="displayType isWork" v-else>{{todo.type}}</div>
             <svg class="icon" @click.prevent="deleteTask(todo, index)">
-              <use xlink:href="/src/sprite.svg#icon-github-with-circle"></use>
+              <path
+                d="M3.389 7.113l1.101 10.908c0.061 0.461 2.287 1.977 5.51 1.979 3.225-0.002 5.451-1.518 5.511-1.979l1.102-10.908c-1.684 0.942-4.201 1.387-6.613 1.387-2.41 0-4.928-0.445-6.611-1.387zM13.168 1.51l-0.859-0.951c-0.332-0.473-0.692-0.559-1.393-0.559h-1.831c-0.7 0-1.061 0.086-1.392 0.559l-0.859 0.951c-2.57 0.449-4.434 1.64-4.434 2.519v0.17c0 1.547 3.403 2.801 7.6 2.801 4.198 0 7.601-1.254 7.601-2.801v-0.17c0-0.879-1.863-2.070-4.433-2.519zM12.070 4.34l-1.070-1.34h-2l-1.068 1.34h-1.7c0 0 1.862-2.221 2.111-2.522 0.19-0.23 0.384-0.318 0.636-0.318h2.043c0.253 0 0.447 0.088 0.637 0.318 0.248 0.301 2.111 2.522 2.111 2.522h-1.7z"
+              ></path>
             </svg>
           </div>
         </main>
@@ -246,6 +248,7 @@ body {
   border: 1px solid #222;
   display: flex;
   align-items: center;
+  z-index: 2;
 }
 .todo::after {
   position: absolute;
@@ -263,21 +266,21 @@ body {
   display: block;
 }
 .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
-  top: 3px;
+  top: 12px;
   right: 3px;
-  fill: #222;
-  stroke: #222;
+  fill: #e84855;
+  stroke: #e84855;
   color: #222;
   z-index: 20;
 }
-
-.icon use {
-  width: 2.5rem;
-  height: 2.5rem;
+.icon:hover {
+  cursor: pointer;
 }
+
 .displayType {
   position: absolute;
   font-size: 0.6rem;
