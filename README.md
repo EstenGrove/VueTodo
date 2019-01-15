@@ -8,19 +8,16 @@ ________________________________________________________________________________
 
 
 ### CRUD App
-```
-  -Create
-  -Read
-  -Update
-  -Delete
-```
-Features:
-```
-  -CRUD
-  -Categorize Todo "type":
-  ```
-    -- Personal 
-    -- Work
-   ```
-```
+
+CRUD:
+ - Create
+ - Read 
+ - Update 
+ - Delete 
+ 
+Additional Features:
+ - Persistence using LocalStorage and later Firebase
+ - Categorize Todos 
+ - Sort todos by category
+
 Web App has built in persistence using Local Storage, will later implement Firebase(firestore) as the database for storing todos. 
