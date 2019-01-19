@@ -18,6 +18,6 @@ CRUD:
 Additional Features:
  - Persistence using LocalStorage and later Firebase
  - Categorize Todos 
- - Sort todos by category
+ - Sort todos by category or task
 
 Web App has built in persistence using Local Storage, will later implement Firebase(firestore) as the database for storing todos. 
